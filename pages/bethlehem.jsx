@@ -61,18 +61,28 @@ export default function Bethlehem() {
             >
               View Photography →
             </a>
+            <img
+    src="/images/photo2.png"
+    alt="Likay la nansā (Lest We Forget)"
+    className="w-full h-auto rounded-lg mb-2 mt-4"
+  />
           </div>
 
           {/* Likay la nansā */}
           <div className="bg-[#181818] p-8 rounded-lg">
-            <h3 className="text-white text-xl font-bold mb-2">
-              Likay la nansā ِلكي لا ننسى (Lest We Forget)
-            </h3>
-            <p className="text-white/70 text-sm mb-4">
-              (1998) by Julia Dabdoub (1926–2009)
-            </p>
-            <p className="text-white/70 text-sm">PDF or link coming soon</p>
-          </div>
+  <h3 className="text-white text-xl font-bold mb-2">
+    Likay la nansā ِلكي لا ننسى (Lest We Forget)
+  </h3>
+  <p className="text-white/70 text-sm mb-4">
+    (1998) by Julia Dabdoub (1926–2009)
+  </p>
+  <p className="text-white/70 text-sm">PDF or link coming soon</p>
+  <img
+    src="/images/photo3.jpg"
+    alt="Likay la nansā (Lest We Forget)"
+    className="w-full h-auto rounded-lg mb-2 mt-4"
+  />
+</div>
         </div>
       </section>
     </div>
