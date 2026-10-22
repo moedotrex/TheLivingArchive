@@ -8,7 +8,7 @@ export default function Home() {
       title: "Bethlehem's Cultural Memory",
       description:
         "Foregrounding Bethlemite indigenous knowledge of tangible and intangible heritage as a site of cultural memory and an enduring infrastructure of communal economic sumūd (steadfastness).",
-      image: "/images/photo2.png",
+      image: "/images/HelenPortrait-Museum-24.jpg",
       href: "/bethlehem",
     },
     {
@@ -73,7 +73,7 @@ export default function Home() {
                   </p>
                   <Link
                     href={project.href}
-                    className="px-6 py-2 bg-[#2F7F7A] hover:bg-[#3F9A94] text-white rounded-lg font-semibold transition w-fit"
+                    className="px-6 py-2 bg-[#4A6B8A] hover:bg-[#3F9A94] text-white rounded-lg font-semibold transition w-fit"
                   >
                     Learn More →
                   </Link>
@@ -107,7 +107,7 @@ export default function Home() {
                 href="https://sites.google.com/view/nevineabraham/about"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#2F7F7A] hover:text-[#3F9A94] underline"
+                className="text-[#4A6B8A] hover:text-[#3F9A94] underline"
               >
                 To learn more about Dr. Abraham, click here →
               </a>

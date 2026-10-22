@@ -42,7 +42,7 @@ export default function Bethlehem() {
           <div className="grid md:grid-cols-2 gap-8 items-stretch">
             {/* 1. Documentary (English subtitles) */}
             <Card
-              title="The Living Archive: Bethlehem's Cultural Memory"
+              
               subtitle="A short documentary by Nevine Abraham & Elias Halabi"
               media={
                 <iframe
@@ -55,10 +55,10 @@ export default function Bethlehem() {
                 />
               }
             >
-              <p className="mb-3">English subtitles</p>
               <p>
-                Arabic version (without subtitles) coming soon.
+                Click here for the Arabic version (without subtitles) coming soon.
               </p>
+              <p className="mb-3 mt-3">الأرشيف الحي: الذاكرة الثقافية لبيت لحم </p>
             </Card>
 
             {/* 2. Essay */}
