@@ -39,11 +39,11 @@ export default function Home() {
 
         {/* Hero Image */}
         <div
-          className="w-full h-96 bg-cover bg-center"
+          className="w-full h-110 bg-cover"
           style={{
             backgroundImage: "url(/images/HelenPortrait-Museum-14.jpg)",
             backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundPosition: "50% 40%",
           }}
         />
 
@@ -73,7 +73,7 @@ export default function Home() {
                   </p>
                   <Link
                     href={project.href}
-                    className="px-6 py-2 bg-[#4A6B8A] hover:bg-[#3F9A94] text-white rounded-lg font-semibold transition w-fit"
+                    className="px-6 py-2 bg-[#4A6B8A] hover:bg-[#5F84A6] text-white rounded-lg font-semibold transition w-fit"
                   >
                     Learn More →
                   </Link>
@@ -107,7 +107,7 @@ export default function Home() {
                 href="https://sites.google.com/view/nevineabraham/about"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#4A6B8A] hover:text-[#3F9A94] underline"
+                className="text-[#4A6B8A] hover:text-[#5F84A6] underline"
               >
                 To learn more about Dr. Abraham, click here →
               </a>
