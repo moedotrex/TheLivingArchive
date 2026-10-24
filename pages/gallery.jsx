@@ -24,14 +24,14 @@ export default function Gallery() {
         <title>Photography | The Living Archive</title>
       </Head>
 
-      <div className="flex min-h-screen flex-col bg-black text-white">
+      <div className="text-xl flex min-h-screen flex-col bg-black text-white">
         <section className="container mx-auto px-12 py-16">
           <Link href="/bethlehem" className="text-[#4A6B8A] hover:text-[#5F84A6] mb-8 inline-block">
             ← Back to Bethlehem's Cultural Memory
           </Link>
 
           <h1 className="text-white text-4xl font-bold mb-4">Photography</h1>
-          <p className="text-[#A3A3A3] text-lg max-w-3xl mb-16">
+          <p className="text-[#A3A3A3] text-xl max-w-3xl mb-16">
             Documenting cultural artifacts, spaces, and social projects. Photography by Elias Halabi.
           </p>
 
@@ -42,7 +42,7 @@ export default function Gallery() {
                 <p className="text-[#4A6B8A] mb-4" dir="rtl">{gallery.arabicTitle}</p>
               )}
               {gallery.description && (
-                <p className="text-[#A3A3A3] text-lg max-w-3xl mb-8">{gallery.description}</p>
+                <p className="text-[#A3A3A3] text-xl max-w-3xl mb-8">{gallery.description}</p>
               )}
 
               <div className="grid md:grid-cols-3 gap-4">

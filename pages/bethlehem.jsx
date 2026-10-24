@@ -11,9 +11,9 @@ function Card({ media, title, subtitle, children }) {
       <div className="p-6 flex flex-col flex-1">
         <h3 className="text-white text-xl font-bold mb-1">{title}</h3>
         {subtitle && (
-          <p className="text-[#4A6B8A] text-sm mb-3">{subtitle}</p>
+          <p className="text-[#4A6B8A] text-xl mb-3">{subtitle}</p>
         )}
-        <div className="text-[#A3A3A3] text-sm">{children}</div>
+        <div className="text-[#A3A3A3] text-xl">{children}</div>
       </div>
     </div>
   );
@@ -26,7 +26,7 @@ export default function Bethlehem() {
         <title>Bethlehem's Cultural Memory | The Living Archive</title>
       </Head>
 
-      <div className="flex min-h-screen flex-col bg-black text-white">
+      <div className="text-xl flex min-h-screen flex-col bg-black text-white">
         <section className="container mx-auto px-12 py-16">
           <Link href="/" className="text-[#4A6B8A] hover:text-[#5F84A6] mb-8 inline-block">
             ← Back to Home
@@ -35,7 +35,7 @@ export default function Bethlehem() {
           <h1 className="text-white text-4xl font-bold mb-4">
             Bethlehem's Cultural Memory
           </h1>
-          <p className="text-[#A3A3A3] text-lg max-w-3xl mb-12">
+          <p className="text-[#A3A3A3] text-xl max-w-3xl mb-12">
             Foregrounding Bethlemite indigenous knowledge of tangible and intangible heritage as a site of cultural memory and an enduring infrastructure of communal economic sumūd (steadfastness).
           </p>
 
@@ -68,7 +68,7 @@ export default function Bethlehem() {
             <Card
               title="Essay"
               media={
-                <p className="text-[#A3A3A3] text-sm">Essay coming soon</p>
+                <p className="text-[#A3A3A3] text-lg">Essay coming soon</p>
               }
             >
               <p>Essay on this project will be posted here.</p>

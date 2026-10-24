@@ -32,7 +32,7 @@ export default function Home() {
           <h1 className="text-white text-5xl font-bold mb-4">
             The Living Archive
           </h1>
-          <p className="text-[#A3A3A3] text-lg max-w-3xl">
+          <p className="text-[#A3A3A3] text-xl max-w-3xl">
             The Living Archive explores how indigenous women across Arab countries witness history, respond to it, and materialize their heritage. This project conceptualizes cultural memory as an embodied, dynamic practice and a living testament to what continues to be.
           </p>
         </div>
@@ -68,7 +68,7 @@ export default function Home() {
                   <h3 className="text-white text-2xl font-bold mb-3">
                     {project.title}
                   </h3>
-                  <p className="text-[#D4D4D4] text-sm mb-6">
+                  <p className="text-[#D4D4D4] text-xl mb-6">
                     {project.description}
                   </p>
                   <Link
@@ -100,14 +100,14 @@ export default function Home() {
               <h3 className="text-white text-2xl font-bold mb-4">
                 Nevine Abraham
               </h3>
-              <p className="text-[#A3A3A3] leading-relaxed mb-6">
+              <p className="text-xl text-[#A3A3A3] leading-relaxed mb-6">
                 Nevine Abraham is Associate Teaching Professor of Arabic Studies in the Department of Languages, Cultures, and Applied Linguistics at Carnegie Mellon University. Her scholarship focuses on the intersection of literary-cultural studies, indigeneity, minoritization, and food studies in Arab countries. She examines how historical and political forces, from imperialism to post-independence nationalism, shape marginalization across the Middle East and North Africa. She weaves these themes into the classroom to help students understand the complexities of power, identity, and representation, to cultivate their intercultural competence.
               </p>
               <a
                 href="https://sites.google.com/view/nevineabraham/about"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#4A6B8A] hover:text-[#5F84A6] underline"
+                className="text-[#4A6B8A] hover:text-[#5F84A6] underline text-xl"
               >
                 To learn more about Dr. Abraham, click here →
               </a>

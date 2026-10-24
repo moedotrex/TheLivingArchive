@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Coptic() {
   return (
-    <div className="flex min-h-screen flex-col bg-black text-white">
+    <div className="text-xl flex min-h-screen flex-col bg-black text-white">
       <section className="container mx-auto px-12 py-16">
         <Link href="/" className="text-[#4A6B8A] hover:text-[#5F84A6] mb-8 inline-block">
           ← Back to Home
@@ -11,7 +11,7 @@ export default function Coptic() {
         <h1 className="text-white text-4xl font-bold mb-4">
           Coptic Cultural Memory
         </h1>
-        <p className="text-[#A3A3A3] text-lg max-w-3xl mb-12">
+        <p className="text-[#A3A3A3] text-xl max-w-3xl mb-12">
           Coming soon.
         </p>
 
