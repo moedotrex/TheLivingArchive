@@ -25,7 +25,7 @@ export default function CopticGallery() {
 
           <h1 className="text-white text-4xl font-bold mb-4">Coptic Cairo Gallery</h1>
           <p className="text-[#A3A3A3] text-xl max-w-3xl mb-12">
-            Photography from the Coptic Cultural Memory collection.
+            Illuminating acts of preservation of Coptic tangible and intangible heritage.
           </p>
 
           <div className="grid md:grid-cols-3 gap-4">
