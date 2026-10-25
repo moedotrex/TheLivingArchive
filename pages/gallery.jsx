@@ -1,10 +1,16 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 
-// Filenames from your public/images folder
-const baituna = Array.from({ length: 16 }, (_, i) => `/images/baituna${i + 1}.jpg`);
-const awu = Array.from({ length: 23 }, (_, i) => `/images/AWU${i + 1}.jpg`);
+// Filenames from your public/images folder, minus the photos Nevine asked to remove
+const baituna = Array.from({ length: 16 }, (_, i) => i + 1)
+  .filter((n) => n !== 8)
+  .map((n) => `/images/baituna${n}.jpg`);
+
+const awu = Array.from({ length: 23 }, (_, i) => i + 1)
+  .filter((n) => n !== 5 && n !== 22)
+  .map((n) => `/images/AWU${n}.jpg`);
 
 const galleries = [
   {
@@ -27,11 +33,13 @@ export default function Gallery() {
   const [openIndex, setOpenIndex] = useState(null);
   const [openList, setOpenList] = useState(null);
 
-  // Close with Escape, and move through photos with arrow keys
   useEffect(() => {
     if (openList === null) return;
     const onKey = (e) => {
-      if (e.key === "Escape") setOpenIndex(null), setOpenList(null);
+      if (e.key === "Escape") {
+        setOpenIndex(null);
+        setOpenList(null);
+      }
       if (e.key === "ArrowRight") setOpenIndex((i) => (i + 1) % openList.length);
       if (e.key === "ArrowLeft") setOpenIndex((i) => (i - 1 + openList.length) % openList.length);
     };
@@ -91,9 +99,15 @@ export default function Gallery() {
                     key={src}
                     type="button"
                     onClick={() => open(gallery.photos, i)}
-                    className="aspect-video w-full overflow-hidden rounded-lg bg-[#222] cursor-zoom-in"
+                    className="relative aspect-video w-full overflow-hidden rounded-lg bg-[#222] cursor-zoom-in"
                   >
-                    <img src={src} alt="" className="w-full h-full object-cover hover:scale-105 transition duration-500" />
+                    <Image
+                      src={src}
+                      alt=""
+                      fill
+                      sizes="(min-width: 768px) 33vw, 100vw"
+                      className="object-cover transition duration-500 hover:scale-105"
+                    />
                   </button>
                 ))}
               </div>
@@ -105,15 +119,21 @@ export default function Gallery() {
       {/* Lightbox */}
       {openList !== null && (
         <div
-          className="fixed inset-0 z-50 bg-black/65 flex items-center justify-center p-4"
+          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4"
           onClick={close}
         >
-          <img
-            src={openList[openIndex]}
-            alt=""
-            className="max-h-full max-w-full object-contain"
+          <div
+            className="relative w-[90vw] h-[85vh]"
             onClick={(e) => e.stopPropagation()}
-          />
+          >
+            <Image
+              src={openList[openIndex]}
+              alt=""
+              fill
+              sizes="90vw"
+              className="object-contain"
+            />
+          </div>
 
           <button
             type="button"

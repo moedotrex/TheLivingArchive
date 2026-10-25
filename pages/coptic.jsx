@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Coptic() {
   return (
@@ -19,12 +20,14 @@ export default function Coptic() {
           <div className="grid md:grid-cols-2 gap-8">
             <Link href="/coptic-gallery" className="block group">
               <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-[#222]">
-                <img
+                <Image
                   src="/images/IMG_0126.jpg"
                   alt="Coptic Cairo Gallery"
-                  className="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+                  fill
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  className="object-cover transition duration-500 group-hover:scale-105"
                 />
-                <h3 className="absolute top-0 left-0 p-5 text-white text-2xl font-bold drop-shadow-lg">
+                <h3 className="absolute top-0 left-0 p-5 text-white text-xl font-bold drop-shadow-lg">
                   Coptic Cairo Gallery
                 </h3>
               </div>

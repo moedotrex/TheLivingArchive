@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 
 const projects = [
   {
@@ -21,10 +22,12 @@ function Tile({ href, image, title }) {
   return (
     <Link href={href} className="block group">
       <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-[#222]">
-        <img
+        <Image
           src={image}
           alt={title}
-          className="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+          fill
+          sizes="(min-width: 768px) 50vw, 100vw"
+          className="object-cover transition duration-500 group-hover:scale-105"
         />
         <h3 className="absolute top-0 left-0 p-5 text-white text-xl font-bold drop-shadow-lg drop-shadow-black">
           {title}
@@ -63,6 +66,7 @@ export default function Home() {
 
         {/* Hero Image */}
         <div
+        loading="lazy"
           className="w-full h-110 bg-cover"
           style={{
             backgroundImage: "url(/images/HelenPortrait-Museum-14.jpg)",
@@ -94,9 +98,11 @@ export default function Home() {
           </h2>
 
           <div className="max-w-4xl mx-auto bg-[#181818] rounded-xl p-8 flex flex-col md:flex-row gap-8 items-center">
-            <img
+            <Image
               src="/images/nevine.jpg"
               alt="Nevine Abraham"
+              width={600}
+              height={800}
               className="w-48 md:w-56 h-auto rounded-lg flex-shrink-0"
             />
 

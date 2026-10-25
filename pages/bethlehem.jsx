@@ -1,11 +1,12 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 
 // Every card uses the same 16:9 media box, with the title and text below
 function Card({ media, title, subtitle, children }) {
   return (
     <div className="bg-[#181818] rounded-xl overflow-hidden flex flex-col h-full">
-      <div className="aspect-video w-full bg-[#222] overflow-hidden flex items-center justify-center">
+      <div className="relative aspect-video w-full bg-[#222] overflow-hidden">
         {media}
       </div>
       <div className="p-6 flex flex-col flex-1">
@@ -42,6 +43,7 @@ export default function Bethlehem() {
             <Card
               media={
                 <iframe
+                  loading="lazy"
                   className="w-full h-full"
                   src="https://www.youtube.com/embed/VD359mTG6BA"
                   title="The Living Archive: Bethlehem's Cultural Memory"
@@ -66,10 +68,12 @@ export default function Bethlehem() {
             <Card
               title="Essay"
               media={
-                <img
+                <Image
                   src="/images/essaycover.jpg"
                   alt="Essay cover"
-                  className="h-full w-full object-cover"
+                  fill
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  className="object-cover"
                 />
               }
             >
@@ -93,11 +97,13 @@ export default function Bethlehem() {
                 </>
               }
               media={
-                <Link href="/gallery" className="block w-full h-full group">
-                  <img
+                <Link href="/gallery" className="group block relative w-full h-full">
+                  <Image
                     src="/images/photographycover.jpg"
                     alt="Photography from Bethlehem's Cultural Memory"
-                    className="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+                    fill
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    className="object-cover transition duration-500 group-hover:scale-105"
                   />
                 </Link>
               }
@@ -115,10 +121,12 @@ export default function Bethlehem() {
               }
               subtitle="(1998) by Julia Dabdoub (1926–2009)"
               media={
-                <img
+                <Image
                   src="/images/photo3.jpg"
                   alt="Likay la nansā (Lest We Forget)"
-                  className="h-full w-auto max-w-full object-contain"
+                  fill
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  className="object-contain"
                 />
               }
             >

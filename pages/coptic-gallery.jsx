@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 
 const photos = [
   "/images/coptic-1.jpg",
@@ -30,8 +31,14 @@ export default function CopticGallery() {
 
           <div className="grid md:grid-cols-3 gap-4">
             {photos.map((src, i) => (
-              <div key={i} className="aspect-video w-full overflow-hidden rounded-lg bg-[#222]">
-                <img src={src} alt="" className="w-full h-full object-cover" />
+              <div key={i} className="relative aspect-video w-full overflow-hidden rounded-lg bg-[#222]">
+                <Image
+                  src={src}
+                  alt=""
+                  fill
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                  className="object-cover"
+                />
               </div>
             ))}
           </div>
